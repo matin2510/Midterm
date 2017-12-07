@@ -12,5 +12,6 @@ public class LoopActivity extends AppCompatActivity {
         setContentView(R.layout.activity_loop);
         RecyclerView movieRecyclerView = (RecyclerView) findViewById(R.id.movie_recyclerview);
 
+
     }
 }
