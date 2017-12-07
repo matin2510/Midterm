@@ -1,5 +1,8 @@
 package nyc.c4q.mustafizurmatin.midterm;
 
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.TextView;
@@ -9,6 +12,8 @@ import android.widget.TextView;
  */
 
  class DoSomeTask extends AsyncTask<Integer, Integer, Integer[]> {
+    private static Dialog progressDialog;
+    private Context context;
 
     TextView textView01;
 
@@ -48,6 +53,10 @@ import android.widget.TextView;
     @Override
     protected void onPostExecute(Integer[] result) {
         super.onPostExecute(result);
+        DoSomeTask.progressDialog.dismiss();
+        context.startActivity(new Intent(context, LoginActivity .class));
+
+
 
 
 

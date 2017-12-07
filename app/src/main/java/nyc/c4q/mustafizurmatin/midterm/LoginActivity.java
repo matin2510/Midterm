@@ -46,8 +46,8 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString("password", password.getText().toString());
                     editor.putBoolean("isChecked", checkBox.isChecked());
                     editor.commit();
-                } else {
                 }
+
                 Intent intent = new Intent(LoginActivity.this, ListActivity.class);
                 intent.putExtra("currentUser", username.getText().toString());
                 startActivity(intent);
